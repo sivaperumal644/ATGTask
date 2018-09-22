@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
             else if(i == 3){
-                imageView.setImageResource(R.drawable.infinitywar);
+                imageView.setImageResource(R.drawable.infinity_image_2);
                 textView.setText("Avengers Infinity War");
             }
             else if(i == 4){
