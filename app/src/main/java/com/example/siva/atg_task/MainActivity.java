@@ -24,10 +24,6 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawer;
     TextView textView;
     ImageView imageView;
-    TextView indicator1;
-    TextView indicator2;
-    TextView indicator3;
-    TextView indicator4;
     MaterialSearchView searchView;
     ScrollView scrollView;
 
@@ -57,14 +53,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         for(int i = 0; i<5; i++){
             View view = inflater.inflate(R.layout.item, image,false);
-            //TextView textView = findViewById(R.id.text);
-            //textView.setText("Movie "+ i);
             imageView = view.findViewById(R.id.imageView);
             textView = view.findViewById(R.id.text);
-
 
             if(i==0){
 
@@ -93,38 +85,6 @@ public class MainActivity extends AppCompatActivity {
             image.addView(view);
         }
 
-        /*SpannableString str = new SpannableString(" Actor ");
-        str.setSpan(new BackgroundColorSpan(Color.GRAY), 0, 7, 0);
-        textView.setText(str);*/
-
-       /* searchView = (MaterialSearchView) findViewById(R.id.search_view);
-        searchView.setOnSearchViewListener(new MaterialSearchView.SearchViewListener() {
-            @Override
-            public void onSearchViewShown() {
-
-            }
-
-            @Override
-            public void onSearchViewClosed() {
-
-            }
-        });
-        searchView.setOnQueryTextListener(new MaterialSearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-
-
-
-                return true;
-            }
-        });
-
-*/
         OverScrollDisabler.disableOverScroll(scrollView);
 
 
@@ -146,6 +106,4 @@ public class MainActivity extends AppCompatActivity {
         searchView.setMenuItem(item);
         return true;
     }
-
-
 }
